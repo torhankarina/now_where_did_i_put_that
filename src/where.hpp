@@ -1,3 +1,4 @@
 #include <string>
 
-std::string hello();
+int find(const std::string& input, char target);
+int find(const std::string& input, const std::string& target);

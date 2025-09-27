@@ -6,5 +6,12 @@
 #include "../src/where.hpp"
 
 TEST_CASE( "it returns Hello World" ) {
-    REQUIRE( hello() == "Hello World!" );
+    REQUIRE(find("The quick brown fox", 'e') == 2);
+    REQUIRE(find("The quick brown fox", ' ') == 3);
+    REQUIRE(find("The quick brown fox", 'z') == -1);
+    REQUIRE(find("The quick brown fox", "e") == 2);
+    REQUIRE(find("The quick brown fox", "quick") == 4);
+    REQUIRE(find("The quick brown fox", "quiet") == -1);
+    REQUIRE(find("The quick brown fox", "") == -1);
+    REQUIRE(find("", "a") == -1);
 }
